@@ -1,5 +1,7 @@
+import PageObject.RegistrationElements;
 import StepObject.RegistrationSteps;
 import com.codeborne.selenide.Condition;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import utils.ChromeRunner;
 import static com.codeborne.selenide.Selectors.*;
@@ -12,10 +14,12 @@ public class zoommer1 extends ChromeRunner {
         RegistrationSteps registrationSteps=new RegistrationSteps();
 registrationSteps.GotoProfile()
         .GotoRegistration()
-        .InputEmail("lelaaa@gmail.com")
+        .InputEmail("lelaag@gmail.com")
         .InputPassword("Qwerty123")
         .InputPassword2("Qwerty123")
         .rules()
         .register();
+        RegistrationElements registrationElements=new RegistrationElements();
+        Assert.assertTrue(registrationElements.welcome.is(Condition.visible));
     }
 }

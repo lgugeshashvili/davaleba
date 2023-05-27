@@ -2,6 +2,7 @@ package StepObject;
 
 import PageObject.RegistrationElements;
 import com.codeborne.selenide.Condition;
+import org.testng.Assert;
 
 public class RegistrationSteps extends RegistrationElements {
     public RegistrationSteps GotoProfile(){
@@ -31,7 +32,8 @@ public class RegistrationSteps extends RegistrationElements {
         return this;
     }
     public RegistrationSteps register(){
+        Assert.assertTrue(registrationBtn.is(Condition.enabled));
         registrationBtn.click();
         return this;
-    }
+        }
 }

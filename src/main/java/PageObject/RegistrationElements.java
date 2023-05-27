@@ -13,6 +13,7 @@ public class RegistrationElements {
             passInput=$(byId("register-password")),
             passrepeteInput=$(byId("ConfirmPassword")),
             rulesAgreementBtn=$(".registration_checkmark"),
-            registrationBtn=$(byId("register-button"));
+            registrationBtn=$(byId("register-button")),
+            welcome=$(".logged_in_welcome");
 
 }
